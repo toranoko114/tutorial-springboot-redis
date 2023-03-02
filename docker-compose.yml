@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  redis:
+    container_name: tutorial_redis_stack
+    image: redis/redis-stack:latest
+    ports:
+      # Redis
+      - 6379:6379
+      # Redis Insight
+      - 8001:8001
