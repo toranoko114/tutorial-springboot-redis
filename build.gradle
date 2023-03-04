@@ -26,6 +26,7 @@ dependencies {
 	implementation group: 'org.modelmapper.extensions', name: 'modelmapper-spring', version: '3.0.0'
 	implementation 'org.springframework.boot:spring-boot-starter-cache'
 	implementation 'redis.clients:jedis'
+	implementation 'commons-codec:commons-codec:1.15'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	runtimeOnly 'com.mysql:mysql-connector-j'

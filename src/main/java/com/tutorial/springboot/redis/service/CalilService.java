@@ -16,7 +16,7 @@ public class CalilService {
 
   private final CalilApiClient apiClient;
 
-  @Cacheable(cacheNames = "tutorialRedisCache")
+  @Cacheable(cacheNames = "tutorialRedisCache", keyGenerator = "redisCustomKeyGenerator", unless = "#result.size()==0")
   public List<CalilLibraryDto> fetchLibraries(CalilLibrarySearchParameter params) {
     return Optional.of(this.apiClient.fetchLibraries(params))
         .map(HttpEntity::getBody)

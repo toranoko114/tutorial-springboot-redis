@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.cache.Cache;
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.interceptor.CacheErrorHandler;
+import org.springframework.cache.interceptor.KeyGenerator;
 import org.springframework.cache.interceptor.SimpleCacheErrorHandler;
 import org.springframework.cache.jcache.config.JCacheConfigurerSupport;
 import org.springframework.context.annotation.Bean;
@@ -86,4 +87,10 @@ public class RedisConfig extends JCacheConfigurerSupport {
       }
     };
   }
+
+  @Bean("redisCustomKeyGenerator")
+  public KeyGenerator keyGenerator() {
+    return new RedisCustomKeyGenerator();
+  }
+
 }
