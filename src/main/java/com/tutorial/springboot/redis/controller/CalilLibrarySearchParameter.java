@@ -1,7 +1,7 @@
 package com.tutorial.springboot.redis.controller;
 
 import io.netty.util.internal.StringUtil;
-import javax.validation.constraints.AssertTrue;
+import jakarta.validation.constraints.AssertTrue;
 import lombok.Data;
 import lombok.RequiredArgsConstructor;
 
